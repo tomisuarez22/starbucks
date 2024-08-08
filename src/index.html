@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>¿Un café? - Starbucks</title>
+</head>
+<body>
+    <header class="header">
+        <input type="checkbox"  id="menu-list" class="header-checkbox">
+        <label for="menu-list" class="menu-button">=</label>
+
+        <div class="logo-container">
+            <img src="./assets/logo.png" class="header-logo">
+        </div>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="list-item"><a href="#">Home</a></li>
+                <li class="list-item"><a href="#about-starbucks">About</a></li>
+                <li class="list-item"><a href="#type__coffees">Portfolio</a></li>
+                <li class="list-item"><a href="#contact__starbucks">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="coffees" id="about-starbucks">
+        <div class="coffees-wrapper">
+            <div class="coffee-img-container">
+                <img src="./assets/Banner_Mesa-de-trabajo-1.webp" class="coffee-img">
+            </div>
+
+
+            <div class="coffee-data-container">
+
+                <div class="data-container">
+                    <h1>¿Un café?</h1>
+                    <p>Starbucks es mucho más que una cadena de cafeterías, es un rincón acogedor donde cada taza de café cuenta una historia. Fundada en 1971 en Seattle, Starbucks ha trascendido fronteras para convertirse en un símbolo de excelencia en el arte del café. Cada grano es cuidadosamente seleccionado de las mejores regiones del mundo, apoyando prácticas sostenibles y a las comunidades locales.</p>
+                </div>
+
+                <div class="data-skills">
+                    <h2>¿Cómo son nuestros cafés?</h2>
+                    <ul>
+                        <li class="coffee-skill">
+                            <div class="load-bar">
+                                <div class="load-bar-bar bar--100">100%</div>
+                            </div>
+                            <span class="skill-name">Ricos</span>
+                        </li>
+                        <li class="coffee-skill">
+                            <div class="load-bar">
+                                <div class="load-bar-bar bar--70">70%</div>
+                            </div>
+                            <span class="skill-name">Económicos</span>
+                        </li>
+                        <li class="coffee-skill">
+                            <div class="load-bar">
+                                <div class="load-bar-bar bar--100">100%</div>
+                            </div>
+                            <span class="skill-name">Salubres</span>
+                        </li>
+                        <li class="coffee-skill">
+                            <div class="load-bar">
+                                <div class="load-bar-bar bar--85">85%</div>
+                            </div>
+                            <span class="skill-name">Aromáticos</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="coffees" id="type__coffees">
+
+        <h2>Tipos de café</h2>
+        <div class="coffees__type-container">
+            <div class="coffee__type">
+                <h2 class="coffee__name">Café</h2>
+            </div>
+            <div class="coffee__type">
+                <h2 class="coffee__name">Café</h2>
+            </div>
+            <div class="coffee__type">
+                <h2 class="coffee__name">Café</h2>
+            </div>
+            <div class="coffee__type">
+                <h2 class="coffee__name">Café</h2>
+            </div>
+            <div class="coffee__type">
+                <h2 class="coffee__name">Café</h2>
+            </div>
+            <div class="coffee__type">
+                <h2 class="coffee__name">Café</h2>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="form" id="contact__starbucks">
+        <div class="container__image-form">
+            <img src="./assets/Frapuccino.webp">
+        </div>
+        <form class="form__form">
+            <h2 class="form__title">Contacto</h2>
+            <div class="form__container">
+                <label class="container__label">Nombre
+                    <input type="text" placeholder="Tomate Jair" class="container__input">
+                </label>
+                <label class="container__label">Apellido
+                    <input type="text" placeholder="Suaretti Gasvel" class="container__input">
+                </label>
+                <label class="container__label">E-mail
+                    <input type="email" placeholder="ejemplo@gmail.com" class="container__input">
+                </label class="container__label"> 
+                <label class="container__label">Mensaje
+                    <textarea placeholder="Dejá tu mensaje..." class="container__input"></textarea>
+                </label>
+                <input type="submit" value="Enviar" class="container__input">
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        &copy; Creado por Tomás Suarez - 2024
+    </footer>
+</body>
+</html>

@@ -1,0 +1,508 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Montserrat';
+    color: #fff;
+    background-color: #a1ccb7;
+    
+}
+
+/* HEADER MOBILE*/
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #047454;
+    position: sticky;
+    z-index: 10;
+    container-name: header;
+    container-type: inline-size;
+    margin-bottom: 0;
+    top: 0;
+}
+
+.header-logo{
+    width: 120px;
+    max-width: 100%;
+    margin: 10px 20px;
+}
+
+.menu-button{
+    position: absolute;
+    font-size: 3.5rem;
+    font-weight: 700;
+    right: 20px;
+}
+
+.header-checkbox{
+    display: none;
+}
+
+.nav{
+    position: absolute;
+    top: 0;
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    background-color: #047454;
+}
+
+.header-checkbox:is(:checked) ~ .nav{
+    display: flex;
+}
+
+.header-checkbox:is(:checked) ~ .header{
+    flex-direction: column;
+}
+
+.nav-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    height: 60vh;
+}
+
+.list-item{
+    list-style: none;
+}
+
+.list-item a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.list-item a:is(:hover, :active){
+    text-decoration: underline;
+}
+
+/* HEADER QUIERIES */
+
+@container header (min-width: 700px){
+    .menu-button{
+        display: none;
+    }
+
+    .nav{
+        position: relative;
+        display: block;
+        height: auto;
+        width: 100%;
+        margin-right: 20px;
+    }
+
+    .nav-list{
+        height: auto;
+        flex-direction: row;
+        justify-content: end;
+        gap: 50px;
+    }
+}
+
+/* MAIN MOBILE */
+
+.coffees{
+    container-name: main;
+    container-type: inline-size;
+    margin-top: 0 !important; 
+}
+
+.coffees-wrapper{
+    background-color: #fff;
+    max-width: 1400px;
+    margin: auto;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.coffee-img-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.coffee-img{
+    max-width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+
+.coffee-data-container{
+    padding: 20px;
+}
+
+.data-container{
+    margin: 0;
+}
+
+.data-container h1{
+    color: #047454;
+    font-weight: 800;
+    margin-bottom: 10px;
+    font-size: 50px;
+    text-align: center;
+}
+
+.data-container p {
+    text-align: center;
+    font-size: 22px;
+    color: #000;
+}
+
+.data-skills{
+    margin: auto;
+    margin: 0;
+    padding: 20px;
+}
+
+.data-skills h2{
+    color: #047454;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 40px;
+    
+}
+
+.coffee-skill{
+    display: flex;
+    justify-content: start;
+    list-style: none;
+    margin: 30px 0;
+}
+
+.load-bar{
+    border: 3px #047454 solid;
+    padding: 3px;
+    border-radius: 10px;
+    width: 50%;
+    max-width: 600px;
+}
+
+.load-bar-bar{
+    background-color: #a1ccb7;
+    color: #068561;
+    border-radius: 8px;
+    padding: 6px;
+    animation: llenarBarra100 1s backwards;
+}
+
+.bar--85{
+    width: 85%;
+    animation: llenarBarra50 1s backwards;
+}
+
+.bar--70{
+    width: 70%;
+    animation: llenarBarra70 1s backwards;
+}
+
+.skill-name{
+    margin-left: 10px;
+    font-size: 20px;
+    color: #068561;;
+    font-weight: 700;
+    margin-top: 7px;
+}
+
+@keyframes llenarBarra100{
+    from{
+        width: 0;
+    }
+
+    to{
+        width: 100%;
+    }
+}
+
+@keyframes llenarBarra70{
+    from{
+        width: 0;
+    }
+
+    to{
+        width: 70%;
+    }
+}
+
+
+@keyframes llenarBarra50{
+    from{
+        width: 0;
+    }
+
+    to{
+        width: 85%;
+    }
+}
+
+
+
+/* MAIN QUIERIES */
+
+@media screen and (min-width: 700px){
+    .coffees-wrapper{
+        display: flex;
+        margin-top: 50px;
+        background-color: #fff;
+        border-radius: 20px 20px 20px 20px;
+        box-shadow: 0 0 10px #222;
+    }
+
+    .coffee-data-container h1, .coffee-data-container h2, .coffee-data-container span{
+        color: #047454;
+    }
+
+    .skill-name{
+        font-size: 27px;
+    }
+
+    .load-bar{
+        border-color: #047454;
+    }
+
+    .load-bar-bar{
+        background-color: #a1ccb7;
+        color: #068561;
+        font-size: 20px;
+    }
+
+    p{
+        font-size: 35px;
+        color: #000;
+    }
+
+    .coffee-img-container{
+        height: auto;
+    }
+
+    .coffee-img{
+        object-fit: cover;
+        border-radius: 20px 0 0 20px;
+    }
+
+    .coffee-data-container{
+        max-width: 800px;
+    }
+    
+}
+
+/* COFFEES TYPE SECTION */
+#type__coffees{
+    display: flex;
+    background-color: #a1ccb7;
+    min-height: 100%;
+    margin-top: 50px !important;
+    flex-direction: column;
+    text-align: center;
+}
+
+.coffees > h2{
+    font-size: 3.6rem;
+    color: #047454;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.coffees__type-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+    height: 90vh;
+    gap: 12px;
+    padding: 12px;
+}
+
+.coffee__type{
+    background-image: linear-gradient(#0007, #0007),url("./assets/Frapuccino.webp");
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    place-content: center;
+    border-radius: 12px;
+}
+
+.coffee__type:hover{
+    opacity: 0.7;
+    outline: 3px #fff solid;
+}
+
+.coffee__name{
+    font-size: 2.6rem;
+}
+
+
+
+
+/* COFFEES TYPE SECTION QUERIES */
+
+@media screen and (min-width: 900px){
+    .coffees__type-container{
+        max-width: 1400px;
+        grid-template-columns: repeat(2, minmax(400px, 1fr));
+    }
+
+    .coffee__type:first-child{
+        grid-column: span 2;
+    }
+
+    .coffee__type:nth-child(6){
+        grid-column: span 2;
+    }
+
+}
+
+@media screen and (min-width: 1200px){
+    .coffees__type-container{
+        grid-template-columns: repeat(4, minmax(300px, 1fr));
+    }
+
+    .coffee__type:first-child{
+        grid-row: span 2;
+    }
+
+    .coffee__type:nth-child(6){
+        grid-column: span 4;
+    }
+}
+
+/* Contact section */
+
+.form{
+    display: flex;
+    flex-direction: column;
+    min-height: 60vh;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 20px;
+    container-name: form;
+    container-type: inline-size;
+    margin-bottom: 50px;
+}
+
+.form__form{
+    flex: 1;
+    width: 100%;
+    padding: 12px;
+}
+
+.form__title{
+    text-align: center;
+    font-size: 3.7rem;
+    color: #047454;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.form__container{
+    display: grid;
+    padding: 20px;
+}
+
+.form label{
+    font-size: 2rem;
+}
+
+.container__input{
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    margin: 1rem 0;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    box-shadow: 2px 2px 4px #2229;
+    outline: 2.2px #a1ccb7 solid;
+}
+
+textarea::placeholder{
+    font-family: 'Montserrat';
+}
+
+textarea{
+    resize: none;
+    min-height: 120px;
+    font-family: inherit;
+}
+
+.container__input:nth-child(5){
+    background-color: #047454;
+    border-radius: 20px;
+    border: none;
+    font-family: inherit;
+    font-size: 1.3rem;
+    color: #fff;
+    
+}
+
+.container__image-form{
+    display: none;
+}
+
+
+/* Contact section QUIERIE */
+
+@media screen and (min-width: 700px){
+    .container__image-form{
+        display: block;
+        width: 40%;
+    }
+
+
+    .form{
+        min-height: 100%;
+        background-color: #fff;
+        flex-direction: row;
+        max-width: 1400px;
+        border-radius: 20px;
+        box-shadow: 2px 2px 5px #2227;
+    }
+    .container__image-form img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        overflow: hidden;
+        border-radius: 20px 0 0 20px;
+    }
+
+    .form__form{
+        width: 100%;
+    }
+
+    
+    .form__container{
+
+    }
+
+    label{
+        color: #068561;
+    }
+}
+
+/*
+    FOOTER
+*/
+
+footer{
+    padding: 40px;
+    background-color: #047454;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+/* ANIMACIONES */
+
